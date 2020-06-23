@@ -1,0 +1,55 @@
+1 - Questions 
+
+Tester les instructions document.write et document.writeln en affichant au minimum un nombre, une phrase, le contenu d'une variable, la valeur de π (pi) et, enfin, un entier choisi aléatoirement entre 0 et 100.
+
+Exemple : 
+
+document.write('<table border="1">');
+
+document.write('<td>');
+
+
+Moduler l'affichage en fonction d'un test. Par exemple, définir une variable contenant une température, puis comparer cette variable à une valeur seuil, afficher un message si la température est inférieure, un autre message si elle est supérieure.
+
+Comparer les boucles while et for pour compter jusqu'à 100.
+
+Utiliser des boucles, puis des boucles imbriquées, pour dessiner des figures géométriques, pleine ou creuses : une ligne, un carré
+
+
+
+2 - Écrivez un programme JavaScript pour calculer la somme et le produit d'un tableau d'entiers.
+
+
+
+3 - Écrivez une boucle JavaScript pour qui itérera de 0 à 15. Pour chaque itération, il vérifiera si le nombre actuel est impair ou pair, et affichera un message à l'écran.
+
+
+
+4 - Écrivez un programme JavaScript qui calcule les notes moyennes des étudiants suivants. Ensuite, cette moyenne est utilisée pour déterminer la note correspondante.
+    (voir tableau annexe)
+
+
+
+5 - Tirage au sort des noms
+
+Ecrire un script composé des fonctions suivante :
+
+    Une fonction qui remplit un tableau par des noms  saisis par l'utilisateur  via une boite de dialogue , cette fonction sera appelée au  clic sur un bouton nommé "Ajouter_nom".
+    Une fonction qui renvoie au hasard le nom gagnant et qui sera lancée lorsque l'utilisateur clique sur le  bouton "tirage au sort" .
+
+
+Indication :
+
+Utiliser la fonction Math.random() qui fournit un nombre réel entre 0 et 0,999
+
+et la fonction push() pour insérer un élément dans un tableau.
+
+
+
+
+
+
+
+
+    
+

@@ -1,0 +1,199 @@
+1 - Questions 
+
+Tester les instructions document.write et document.writeln en affichant au minimum un nombre, une phrase, le contenu d'une variable, la valeur de π (pi) et, enfin, un entier choisi aléatoirement entre 0 et 100.
+
+Exemple : 
+
+document.write('<table border="1">');
+
+document.write('<tr>');
+
+/* premier affichage */
+document.write('bonjour !');
+
+/* affichage entier aleatoire */
+var i = Math.floor(Math.random() * 100);
+document.write(i);
+
+
+Moduler l'affichage en fonction d'un test. Par exemple, définir une variable contenant une température, puis comparer cette variable à une valeur seuil, afficher un message si la température est inférieure, un autre message si elle est supérieure.
+
+/* variable et instruction conditionnelle IF */
+ var temperature = 12;
+ if (temperature>20) {
+   document.write('il fait chaud !');
+ } else {
+   document.write('il fait froid !');
+ }
+
+Comparer les boucles while et for pour compter jusqu'à 100.
+
+ /* on compte jusqu'à 100 avec un POUR */
+ for (var i=1 ; i<=100 ; i=i+1) {
+   document.write(i);
+   document.writeln('<br>');
+ }
+
+ /* on compte jusqu'à 100 avec un TantQue */
+ var i=1;
+while (i<=100) {
+  document.write(i);
+  document.writeln('<br>');
+  i = i+1;
+}
+
+Utiliser des boucles, puis des boucles imbriquées, pour dessiner des figures géométriques, pleine ou creuses : une ligne, un carré
+
+/* une ligne de 10 étoiles avec un POUR, dans un tableau HTML */
+
+document.write('<table border="1">');
+document.write('<tr>'); /* début de ligne */
+for (var i=1 ; i<=10 ; i=i+1) {
+   document.write('<td>');
+   document.write('*');
+   document.write('</td>');
+ }
+ document.write('</tr>'); /* fin de ligne */
+ document.write('</table>');
+
+/* un carré 10x10 d'étoiles, dans un tableau HTML */
+
+document.write('<table border="1">');
+ for (var j=1 ; j<=10 ; j=j+1) {
+   document.write('<tr>'); /* début de ligne */
+   for (var i=1 ; i<=10 ; i=i+1) {
+     document.write('<td>');
+     document.write('*');
+     document.write('</td>');
+   }
+   document.write('</tr>'); /* fin de ligne */
+ }
+ document.write('</table>');
+
+
+2 - Écrivez un programme JavaScript pour calculer la somme et le produit d'un tableau d'entiers.
+
+var array = [1, 2, 3, 4, 5, 6],
+    s = 0,
+    p = 1,
+    i;
+
+var somme = array.reduce(function(sum, elem){
+return sum + elem;
+
+var produit = array.reduce(function(prod, elem){
+return prod * elem;
+
+OU
+
+});
+
+for (i = 0; i < array.length; i += 1) {
+    s += array[i];
+    p *= array[i];
+    }
+
+console.log('Sum : '+s + ' Product :  ' +p);
+
+
+
+3 - Écrivez une boucle JavaScript pour qui itérera de 0 à 15. Pour chaque itération, il vérifiera si le nombre actuel est impair ou pair, et affichera un message à l'écran.
+
+for (var x=0; x<=15; x++) {
+        if (x === 0) {
+                console.log(x +  " is even");
+        }
+        else if (x % 2 === 0) {
+                console.log(x + " is even");   
+        }
+        else {
+                console.log(x + " is odd");
+        }
+}
+
+
+
+4 - Écrivez un programme JavaScript qui calcule les notes moyennes des étudiants suivants. Ensuite, cette moyenne est utilisée pour déterminer la note correspondante.
+    (voir tableau annexe)
+
+var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+
+var Avgmarks = 0;
+
+for (var i=0; i < students.length; i++) {
+        Avgmarks += students[i][1];
+        var avg = (Avgmarks/students.length);
+}
+
+
+
+console.log("Average grade: " + (Avgmarks)/students.length);
+
+        if (avg < 60){
+          console.log("Grade : F");      
+          } 
+        else if (avg < 70) {
+          console.log("Grade : D"); 
+          } 
+        else if (avg < 80) {
+          console.log("Grade : C"); 
+          } 
+	else if (avg < 90) {
+          console.log("Grade : B"); 
+        } 
+	else if (avg < 100) {
+          console.log("Grade : A"); 
+}
+
+
+5 - Tirage au sort des noms
+
+Ecrire un script composé des fonctions suivante :
+
+    Une fonction qui remplit un tableau par des noms  saisis par l'utilisateur  via une boite de dialogue , cette fonction sera appelée au  clic sur un bouton nommé "Ajouter_nom".
+    Une fonction qui renvoie au hasard le nom gagnant et qui sera lancée lorsque l'utilisateur clique sur le  bouton "tirage au sort" .
+
+
+Indication :
+
+Utiliser la fonction Math.random() qui fournit un nombre réel entre 0 et 0,999
+
+et la fonction push() pour insérer un élément dans un tableau.
+
+
+
+<!doctype html>
+<html>
+<head>
+	<title>Tirage au sort des noms</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button onclick="add_nom()">Ajouter_nom</button>
+     <button onclick="tirage()">Tirage au sort</button>
+</body>
+</html>
+
+
+<script>
+    //Déclarer un tableau
+	var tab=new Array();
+	function add_nom(){
+		tab.push(prompt("Saisir un nom"));
+	}
+    function tirage(){
+    	if(tab.length>0){
+    /*Math.random()*tab.length renvoie un nombre réel entre 0 et la taille du tableau tab.length et on arrondit à l'entier inférieur par la fonction Math.floor()*/
+        var rand = Math.floor(Math.random()*tab.length);
+        alert("Le nom gagnant est : "+tab[rand]);
+    	}
+    	else alert("Veillez ajouter des noms");
+    }
+</script>
+
+
+
+
+
+    
+
