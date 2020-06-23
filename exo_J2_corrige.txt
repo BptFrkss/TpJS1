@@ -1,0 +1,111 @@
+1 - Écrivez un programme JavaScript pour afficher le jour et l'heure actuels.
+
+var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+  var hour = today.getHours();
+  var minute = today.getMinutes();
+  var second = today.getSeconds();
+  var prepand = (hour >= 12)? " PM ":" AM ";
+  console.log("Aujourd'hui, nous sommes " + daylist[day] + ", et il est "+hour +  "h" + minute + "m" + second + "s" + prepand );
+
+2 - Écrivez un programme JavaScript qui itère les entiers de 1 à 100. Mais pour les multiples de trois, imprimez "Fizz" au lieu du nombre et 
+    pour les multiples de cinq imprimez "Buzz". Pour les nombres qui sont des multiples de trois et cinq, imprimez "FizzBuzz".
+
+for ( var i = 1; i <= 100; i++ )
+{
+  if ( i%3 === 0 && i%5 === 0 )
+  {
+    console.log( i + " FizzBuzz" );
+  }
+  else if ( i%3 === 0 ) 
+  {
+    console.log(i+ " Fizz" );
+  }
+  else if ( i%5 === 0 ) 
+  {
+    console.log(i+ " Buzz" );
+  }
+  else
+  {
+    console.log(i);
+  }
+}
+
+3 - Définir en JavaScript un tableau contenant des notes d'étudiants comprises entre 0 et 20.
+    Implémenter en JavaScript les fonctions qui permettent d'afficher un tel tableau, de savoir combien d'étudiants ont eu 10 plus, 
+    de calculer la moyenne des notes, de connaître la note maximale, de rechercher une note particulière
+
+<script>
+
+ /* Affiche le contenu d'un tableau en HTML */
+ 
+ function affiche_tableau (t) {
+   document.writeln('<p>le tableau est :</p>');
+   document.writeln('<table border="1"><tr>');
+   for (var i=0 ; i<t.length ; i++) {
+       document.writeln('<td>',t[i],'</td>');
+   }
+   document.writeln('</tr></table>');
+ }
+ 
+ 
+ /* Calcule et affiche la moyenne des éléments d'un tableau */
+ function affiche_moyenne (t) {
+   var somme = 0;
+   for (var i=0 ; i<t.length ; i++) {
+     somme = somme + t[i];
+   }
+   document.writeln('<p>la moyenne vaut ',(somme/t.length),'</p>');
+ }
+ 
+ /* Compte et affiche le nombre d'apparitions d'un élément dans un tableau */
+ function occurrences (x,t) {
+   var fois = 0;
+   for (var i=0 ; i<t.length ; i++) {
+     if (t[i]==x) {
+       fois = fois + 1;
+     }
+   }
+  document.writeln('<p>',x,' apparait ',fois,' fois.</p>');
+ }
+ 
+ 
+ /* Compte et affiche combien ont eu 10 ou plus */
+ function onteulamoyenne (t) {
+   var n = 0;
+   for (var i=0 ; i<t.length ; i++) {
+     if (t[i]>=10) {
+       n = n + 1;
+     }
+   }
+  document.writeln('<p>',n,' ont eu la moyenne.</p>');
+ }
+
+ /* Indique si un élément est présent dans un tableau ou non */
+ function recherche (x,t) {
+   var i = 0;
+   while ((i<t.length) && (t[i]!=x)) {
+     i = i+1
+   }
+   if (i<t.length) {
+     document.writeln('<p>',x,' est présent.</p>');
+   } else {
+    document.writeln('<p>',x,' n\'est pas présent.</p>');
+   }
+ }
+
+ /* appels aux procédures définies ci-dessus */
+
+ var notes = [5,12,8,20,10];
+ notes[2] = 9;
+ 
+ affiche_tableau(notes);
+ affiche_moyenne(notes);
+ occurrences(12,notes);
+ occurrences(2,notes);
+ onteulamoyenne(notes);
+ recherche(12,notes);
+ recherche(2,notes);
+ </script>
+

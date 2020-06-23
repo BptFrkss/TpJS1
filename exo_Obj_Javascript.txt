@@ -1,0 +1,15 @@
+1 - Écrivez un programme JavaScript pour supprimer la propriété rollno de l'objet suivant. Imprimez également l'objet avant ou après la suppression de la propriété.
+
+2 - Créez un objet pour contenir des informations sur votre recette préférée. Il doit avoir des propriétés pour le titre (une chaîne), les portions (un nombre) et les ingrédients (un tableau de chaînes).
+    Sur des lignes distinctes (une instruction console.log pour chacune), enregistrez les informations sur la recette afin qu'elles ressemblent à:
+        nom : 'socca'
+        servies: 2
+        Ingrédients:
+        Pois-chiche
+        Soleil
+        Poivre
+
+2 - Écrivez un programme JavaScript pour afficher l'état de lecture (c'est-à-dire afficher le nom du livre, le nom de l'auteur et l'état de lecture) des livres suivants.
+
+
+   

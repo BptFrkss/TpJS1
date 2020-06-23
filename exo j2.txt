@@ -1,0 +1,8 @@
+1 - Écrivez un programme JavaScript pour afficher le jour et l'heure actuels.
+
+2 - Écrivez un programme JavaScript qui itère les entiers de 1 à 100. Mais pour les multiples de trois, imprimez "Fizz" au lieu du nombre et 
+    pour les multiples de cinq imprimez "Buzz". Pour les nombres qui sont des multiples de trois et cinq, imprimez "FizzBuzz".
+
+3 - Définir en JavaScript un tableau contenant des notes d'étudiants comprises entre 0 et 20.
+    Implémenter en JavaScript les fonctions qui permettent d'afficher un tel tableau, de savoir combien d'étudiants ont eu 10 plus, 
+    de calculer la moyenne des notes, de connaître la note maximale, de rechercher une note particulière
